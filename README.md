@@ -39,13 +39,17 @@ python -m venv .venv
 .venv\Scripts\activate   # Windows
 pip install -r requirements.txt
 
-# 2. Tien xu ly du lieu
+# 2. Chay toan bo pipeline (tien xu ly + train + vebieu do)
+powershell -ExecutionPolicy Bypass -File run_all.ps1
+
+# Hoac chay tung buoc le:
+# 2a. Tien xu ly du lieu
 python src/data/make_dataset.py
 
-# 3. Huan luyen mo hinh
+# 2b. Huan luyen mo hinh
 python src/models/train_model.py
 
-# 4. Ve bieu do
+# 2c. Ve bieu do
 python src/visualization/visualize.py
 
 # 5. Du doan 1 can nha moi (khong tron tham so: dung vi du mac dinh)
