@@ -17,7 +17,9 @@ Du an hoc may du doan gia nha (MEDV) tu bo du lieu Boston Housing.
 │   │   └── build_features.py   # Imputer (median) + StandardScaler
 │   └── models/
 │       ├── train_model.py      # Chia 3 tap, huan luyen LinearRegression, tinh metric
-│       └── plot_results.py     # Residual plot, du doan vs thuc te
+│       └── __init__.py
+├── visualization/
+│   └── visualize.py            # 6 bieu do: phan phoi, tuong quan, residual, he so...
 ├── models/                 # Mo hinh da luu (.joblib)
 ├── reports/
 │   ├── figures/            # Bieu do, ket qua truc quan
@@ -43,8 +45,19 @@ python src/data/make_dataset.py
 python src/models/train_model.py
 
 # 4. Ve bieu do
-python src/models/plot_results.py
+python src/visualization/visualize.py
 ```
+
+## Bieu do dau ra (reports/figures/)
+
+| File | Noi dung |
+|---|---|
+| `target_distribution.png` | Histogram + boxplot gia nha (MEDV) |
+| `correlation_heatmap.png` | Ma tran tuong quan giua cac dac trung |
+| `feature_vs_target.png` | 4 dac trung tuong quan manh nhat vs gia nha |
+| `predictions_vs_true.png` | Gia du doan vs gia thuc (test) |
+| `residuals.png` | Residual plot + phan phoi residual |
+| `coefficients.png` | He so hoi quy cua tung dac trung |
 
 ## Mo ta du lieu
 
