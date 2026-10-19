@@ -17,6 +17,7 @@ Du an hoc may du doan gia nha (MEDV) tu bo du lieu Boston Housing.
 │   │   └── build_features.py   # Imputer (median) + StandardScaler
 │   └── models/
 │       ├── train_model.py      # Chia 3 tap, huan luyen LinearRegression, tinh metric
+│       ├── predict_model.py    # Du doan gia 1 can nha moi tu 13 dac trung
 │       └── __init__.py
 ├── visualization/
 │   └── visualize.py            # 6 bieu do: phan phoi, tuong quan, residual, he so...
@@ -46,7 +47,14 @@ python src/models/train_model.py
 
 # 4. Ve bieu do
 python src/visualization/visualize.py
+
+# 5. Du doan 1 can nha moi (khong tron tham so: dung vi du mac dinh)
+python src/models/predict_model.py 0.02 0 6.91 0 0.448 6.15 38.9 4.88 4 224 14.7 392.84 4.59
 ```
+
+## Thu tu 13 dau vao khi du doan
+
+`CRIM, ZN, INDUS, CHAS, NOX, RM, AGE, DIS, RAD, TAX, PTRATIO, B, LSTAT`
 
 ## Bieu do dau ra (reports/figures/)
 
